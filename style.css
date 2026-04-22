@@ -1,18 +1,34 @@
 @font-face {
-    font-family: 'TT Lakes Compressed';
-    src: url('TTLakesCompressed-Regular.eot');
-    src: url('TTLakesCompressed-Regular.eot?#iefix') format('embedded-opentype'),
-        url('TTLakesCompressed-Regular.woff') format('woff'),
-        url('TTLakesCompressed-Regular.ttf') format('truetype');
+    font-family: 'TT Lakes';
+    src: url('font/TTLakes/TTLakes-Regular.woff') format('woff'),
+        url('font/TTLakes/TTLakes-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('font/TTLakes/TTLakes-Medium.woff') format('woff'),
+        url('font/TTLakes/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('font/TTLakes/TTLakes-Bold.woff') format('woff'),
+        url('font/TTLakes/TTLakes-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
 
 body {
     margin: 0;
@@ -43,18 +59,29 @@ body {
 .img__group {
     width: 96px;
     height: 50px;
+}
 
-    top: 18.59px;
-    left: 72.73px;
-    padding-left: 17px;
+.header__burger-btn,
+.header__phone-btn,
+.header__repair-btn,
+.header__check-btn,
+.header__profile-btn,
+.header__chat-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img__burger {
-    width: 54px;
-    height: 54px;
+    width: 40px;
+    height: 40px;
     top: 24px;
     left: 16px;
-    padding-left: 17px;
+
 }
 
 .img__divider {
@@ -89,6 +116,11 @@ body {
     width: 100%;
     height: auto;
     top: 112px;
+}
+
+.services__title-name {
+    font-size: 28px;
+    white-space: nowrap;
 }
 
 .services__info {
@@ -129,7 +161,7 @@ body {
     width: 100%;
     height: 40px;
     overflow-x: auto;
-    overflow-y: visible;
+    overflow-y: hidden;
     margin-left: 0px;
     margin-bottom: 24px;
 }
@@ -140,12 +172,12 @@ body {
     top: 176px;
     left: 16px;
     justify-content: flex-start;
-    overflow-x: auto;
     list-style: none;
     padding: 0;
     white-space: nowrap;
     align-items: center;
     margin-top: 0;
+    overflow: visible;
 }
 
 
@@ -173,7 +205,15 @@ body {
 
 .more {
     display: flex;
+}
 
+.more__readmore {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header__container {
@@ -188,7 +228,7 @@ body {
 .header__container--left {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 16px;
     justify-content: flex-start;
 }
 
@@ -207,9 +247,6 @@ body {
     margin-right: 0px;
 }
 
-.header__divider {
-    margin-right: 16px;
-}
 
 .header__shadow {
     display: block;
@@ -257,7 +294,6 @@ body {
 .header__divider--mobile-only {
     display: none;
 }
-
 
 
 @media (min-width: 768px) {
@@ -324,6 +360,7 @@ body {
 
 }
 
+
 @media (min-width: 1120px) {
 
     .header__container {
@@ -342,6 +379,7 @@ body {
         padding: 32px;
         max-width: 1120px;
         margin: 0 auto;
+        gap: 38px;
     }
 
     .services__info {
@@ -351,23 +389,35 @@ body {
     .services__text {
         flex: 1;
         max-width: none;
+        flex-wrap: nowrap;
     }
 
     .services__image {
+        display: flex;
         flex: 1;
     }
 
     .menu {
         flex-wrap: wrap;
+        white-space: normal;
         width: 1063px;
         height: 82px;
         top: 90px;
         left: 33px;
         border-radius: 6px;
+        width: 100%;
+        margin-bottom: 32px;
     }
+
+    .services__nav {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+
 
     .menu__item {
         font-size: 16px;
+        white-space: normal;
     }
 
     .services__text--desktop2 {
