@@ -50,6 +50,22 @@ body {
     height: 100%;
 }
 
+.header__burger-btn,
+.header__phone-btn,
+.header__chat-btn,
+.header__profile-btn,
+.header__repair-btn,
+.header__check-btn {
+    width: 40px;
+    height: 40px;
+    top: 24px;
+    left: 24px;
+    angle: 0 deg;
+    opacity: 1;
+    border-radius: 20px;
+    background: #FF3E79;
+}
+
 .header__img {
     display: flex;
     flex-direction: row;
@@ -61,14 +77,9 @@ body {
     height: 50px;
 }
 
-.header__burger-btn,
-.header__phone-btn,
-.header__repair-btn,
-.header__check-btn,
-.header__profile-btn,
-.header__chat-btn {
-    background: none;
+button {
     border: none;
+    background: none;
     padding: 0;
     cursor: pointer;
     display: flex;
@@ -76,13 +87,6 @@ body {
     justify-content: center;
 }
 
-.img__burger {
-    width: 40px;
-    height: 40px;
-    top: 24px;
-    left: 16px;
-
-}
 
 .img__divider {
     padding-left: 17px;
@@ -295,6 +299,17 @@ body {
     display: none;
 }
 
+.services__desktop-actions {
+    display: none;
+}
+
+.services__text--desktop2 {
+    display: none;
+}
+
+.more__img {
+    margin-right: 10px;
+}
 
 @media (min-width: 768px) {
     .services__info {
@@ -362,24 +377,41 @@ body {
 
 
 @media (min-width: 1120px) {
-
-    .header__container {
-        padding: 20px 32px;
-    }
-
-    .header__action-text {
-        display: inline;
-    }
-
-    .header__actions {
+    .services__desktop-actions {
+        display: flex;
+        align-items: center;
         gap: 32px;
+        margin-left: auto;
+    }
+
+    .services__desktop-actions .header__action-text {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        color: #1B1C21;
+        white-space: nowrap;
+    }
+
+    .header__repair-btn,
+    .header__check-btn {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        top: 24px;
+        left: 24px;
+        border-radius: 20px;
+        background: #FF3E79;
+    }
+
+    .header {
+        display: none;
     }
 
     .services__container {
         padding: 32px;
-        max-width: 1120px;
+        width: 100%;
         margin: 0 auto;
-        gap: 38px;
+        gap: 30px;
     }
 
     .services__info {
@@ -390,6 +422,8 @@ body {
         flex: 1;
         max-width: none;
         flex-wrap: nowrap;
+        margin-bottom: 20px;
+        margin-top: 5px;
     }
 
     .services__image {
@@ -400,7 +434,6 @@ body {
     .menu {
         flex-wrap: wrap;
         white-space: normal;
-        width: 1063px;
         height: 82px;
         top: 90px;
         left: 33px;
@@ -414,7 +447,6 @@ body {
         overflow-y: visible;
     }
 
-
     .menu__item {
         font-size: 16px;
         white-space: normal;
@@ -423,4 +455,14 @@ body {
     .services__text--desktop2 {
         display: block;
     }
+
+    .services__title {
+        margin-bottom: 0;
+        justify-content: flex-start;
+    }
+
+    .services__text--desktop-only {
+        display: none;
+    }
+
 }
