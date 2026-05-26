@@ -29,7 +29,7 @@ body {
 }
 
 .all {
-   
+
     width: 320px;
     height: 1024px;
     box-shadow: 8px 0 25px -5px rgba(0, 0, 0, 0.35);
@@ -51,6 +51,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .header__btn-search {
@@ -62,6 +63,10 @@ body {
     position: absolute;
     top: 23px;
     left: 256px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .header__cps-name {
@@ -208,6 +213,7 @@ li:nth-child(7) {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .footer__btn-chat {
@@ -222,6 +228,7 @@ li:nth-child(7) {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .footer__btn-profile {
@@ -236,6 +243,7 @@ li:nth-child(7) {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .footer__btn-profile:hover,
@@ -285,12 +293,27 @@ li:nth-child(7) {
     letter-spacing: -0.2px;
 }
 
+.footer__email a {
+    list-style: none;
+}
+
+.footer__number a {
+    list-style: none;
+}
+
 .footer__lang-ru {
-    color: #7E7E82;
+    color: black;
     width: 25px;
     height: 24px;
     top: 968px;
     left: 24px;
+    cursor: pointer;
+}
+
+.footer__lang-ru:hover,
+.footer__lang-en:hover,
+.footer__lang-ch:hover {
+    color: #7E7E82;
 }
 
 .footer__lang-en {
@@ -298,11 +321,15 @@ li:nth-child(7) {
     height: 24px;
     top: 968px;
     left: 56px;
+    cursor: pointer;
 }
+
+
 
 .footer__lang-ch {
     width: 24px;
     height: 24px;
     top: 968px;
     left: 87px;
+    cursor: pointer;
 }
