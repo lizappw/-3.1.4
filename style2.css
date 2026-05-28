@@ -125,6 +125,13 @@ body {
 li {
     position: absolute;
     list-style: none;
+    font-family: TT Lakes;
+    font-weight: 500;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
 }
 
 .main__menu a:hover {
@@ -239,7 +246,7 @@ li:nth-child(7) {
     box-shadow: 0 0 15px rgba(100, 180, 230, 0.7);
 }
 
-.footer__email {
+a[href^="mailto:"] {
     position: absolute;
     width: 106px;
     height: 24px;
@@ -251,9 +258,13 @@ li:nth-child(7) {
     leading-trim: NONE;
     line-height: 24px;
     letter-spacing: -0.2px;
+    list-style: none;
+    text-decoration: none;
+    color: #1B1C21;
+
 }
 
-.footer__number {
+a[href^="tel:"] {
     position: absolute;
     width: 196px;
     height: 32px;
@@ -267,6 +278,8 @@ li:nth-child(7) {
     letter-spacing: -0.6px;
     color: #1B1C21;
     font-weight: bold;
+    list-style: none;
+    text-decoration: none;
 }
 
 .footer_lang {
