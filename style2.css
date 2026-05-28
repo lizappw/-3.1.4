@@ -113,16 +113,8 @@ body {
     cursor: pointer;
 }
 
-.dropdown {
-    position: relative;
-}
-
-.dropdown-checkbox {
-    display: none;
-}
 
 .main__menu {
-    display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -130,19 +122,13 @@ body {
     z-index: 1;
 }
 
-.dropdown-checkbox:checked~.main__menu {
-    display: block;
-}
-
-
-
 li {
     position: absolute;
     list-style: none;
 }
 
 .main__menu a:hover {
-    color: rgb(245, 83, 137);
+    color: #7E7E82;
 }
 
 .main__menu a {
